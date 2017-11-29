@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      background: #dedede;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      display: flex;
+    }
+    ul li {
+      list-style: none;
+    }
+    ul li a {
+      text-decoration: none;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 0 10px;
+      padding: 6px;
+      display: block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(0deg,#ddd,#fff);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    }
+    ul li a:active {
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    ul li a .fa:hover {
+      color: blue;
+    }
+    ul li a .fa {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+      line-height: 48px;
+      font-size: 25px;
+      background: linear-gradient(180deg,#ddd,#fff);;
+      color: #262626;
+      transition: 0.3s;
+    }
+  </style>
+  <title>Button</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <ul>
+    <li><a href="#"><i class="fa fa-backward" aria-hidden="true"></i></a></li>
+    <li><a href="#"><i class="fa fa-play" aria-hidden="true"></i></a></li>
+    <li><a href="#"><i class="fa fa-pause" aria-hidden="true"></i></a></li>
+    <li><a href="#"><i class="fa fa-stop" aria-hidden="true"></i></a></li>
+    <li><a href="#"><i class="fa fa-forward" aria-hidden="true"></i></a></li>
+  </ul>
+</body>
+</html>

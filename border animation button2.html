@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #262626;
+  }
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .center a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    color: #f1ff36;
+    background: #262626;
+  }
+  a:after,a:before,span:after,span:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #f1ff36;
+    z-index: -1;
+    transition: 1s;
+  }
+  a:before {
+    top: -2px;
+    left: -2px;
+  }
+  a:after {
+    top: -2px;
+    right: -2px;
+  }
+  span:before {
+    bottom: -2px;
+    left: -2px;
+  }
+  span:after {
+    bottom: -2px;
+    right: -2px;
+  }
+  a:hover:after,
+  a:hover:before,
+  a:hover span:before,
+  a:hover span:after {
+    width: 72px;
+    height: 22px;
+  }
+  </style>
+  <title>Border animation button</title>
+</head>
+<body>
+  <div class="center">
+    <a href="#">BUTTON<span></span></a>
+  </div>
+</body>
+</html>

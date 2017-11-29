@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+  body {
+    background: #eee;
+  }
+  .btn-res {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: tomato;
+    position: relative;
+    margin: 50px auto;
+    cursor: pointer;
+  }
+  .btn-res span, .btn-res span:before, .btn-res span:after {
+    width: 30px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: calc(50% - 15px);
+    transition-duration: 0.3s;
+  }
+  .btn-res span:before {
+    top: -7px;
+    content: "";
+    transform-origin: 0% 50%;
+  }
+  .btn-res span:after {
+    top: 7px;
+    content: "";
+    transform-origin: 0% 50%;
+  }
+  .btn-res.cross span{
+    background: tomato;
+  }
+  .btn-res.cross span{
+    background: tomato;
+  }
+  .btn-res.cross span:before {
+    transform: translate(4px,-3px) rotate(45deg);
+  }
+  .btn-res.cross span:after {
+    transform: translate(4px,3px) rotate(-45deg);
+  }
+  </style>
+  <title>Responsive button</title>
+</head>
+<body>
+  <div id="button" class="btn-res" onclick="func()">
+    <span></span>
+  </div>
+</body>
+<script>
+  var button = document.getElementById("button");
+
+  function func() {
+    button.classList.toggle("cross");
+  }
+</script>
+</html>
